@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+
+    tools:context=".navigation_button_booking.flightDate">
+    <!--Date section-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/container">
+    <!--date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="15dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_main_booking_flight_takeoff"
+            android:layout_margin="5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="5dp">
+            <TextView
+                android:id="@+id/GetFromDateDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departure Date"
+                android:textSize="18dp"
+                android:onClick="setDate"
+                />
+            <TextView
+                android:id="@+id/fromDateDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AirPort"
+                android:textSize="16dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <!--End of date -->
+
+    <!--date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_main_booking_flight_land_black"
+            android:layout_margin="5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="5dp">
+            <TextView
+                android:id="@+id/GetReturnDateDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Return Date"
+                android:textSize="18dp"
+                android:onClick="setDate"
+               />
+
+            <TextView
+                android:id="@+id/returnDateDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AirPort"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--End of date -->
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

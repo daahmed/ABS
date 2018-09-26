@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".booking.mainBooking">
+    <ScrollView
+        android:id="@+id/main_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            >
+
+            <TextView
+                android:id="@+id/hello"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aireline Booking System"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:id="@+id/main_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hello"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/container"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--Origin-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_weight="5">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_main_booking_pin_drop"
+                        android:layout_margin="5dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Origin"
+                            android:textSize="16dp"/>
+                        <EditText
+                            android:id="@+id/edit_origin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Like:JED ,DXB"
+                            android:textSize="12dp"
+                            android:background="@null"
+                            android:maxLines="1"
+                            android:imeOptions="actionNext"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--End Origin-->
+                <!--Destination-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_weight="5">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_main_booking_pin_drop"
+                        android:layout_margin="5dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Destination"
+                            android:textSize="16dp"
+                            />
+                        <EditText
+                            android:id="@+id/edit_destination"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Like:JED ,DXB"
+                            android:textSize="12dp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:imeOptions="actionDone"
+                            android:maxLines="1"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                </LinearLayout>
+                <!--End Destination-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#C2185B"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="30dp"/>
+                <!--Date section-->
+                <LinearLayout
+                    android:id="@+id/container_date_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                   >
+                    <!--date -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginBottom="15dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_main_booking_flight_takeoff"
+                            android:layout_margin="5dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="5dp">
+                            <TextView
+                                android:id="@+id/GetFromDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Departure Date"
+                                android:textSize="16dp"
+                                />
+                            <TextView
+                                android:id="@+id/fromDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AirPort"
+                                android:textSize="10dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--End of date -->
+
+                    <!--date -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_main_booking_flight_land_black"
+                            android:layout_margin="5dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="5dp">
+                            <TextView
+                                android:id="@+id/GetReturnDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Return Date"
+                                android:textSize="16dp"
+                              />
+                            <TextView
+                                android:id="@+id/returnDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AirPort"
+                                android:textSize="10dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--End of date -->
+
+                </LinearLayout>
+                <!--End Date section-->
+
+            </LinearLayout>
+            <!--passengere-->
+            <LinearLayout
+                android:id="@+id/second_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_container"
+                android:padding="5px"
+                android:orientation="vertical"
+                android:background="@drawable/container"
+                android:layout_marginTop="10dp"
+               >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                    <!--date -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="45dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="0dp"
+                            >
+                            <TextView
+                                android:id="@+id/classView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="class"
+                                android:textSize="16dp"/>
+                            <TextView
+                                android:id="@+id/classValueView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AirPort"
+                                android:textSize="10dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="0dp"
+                            >
+                            <TextView
+                                android:id="@+id/passengerView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Passenger"
+                                android:textSize="16dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:background="@drawable/man18"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"
+                                    />
+                                <TextView
+                                    android:id="@+id/passengerManCountView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="10dp"
+                                    android:padding="3dp"/>
+                                <ImageView
+                                    android:background="@drawable/boy20"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"/>
+                                <TextView
+                                    android:id="@+id/passengerBoyCountView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="10dp"
+                                    android:padding="3dp"/>
+                                <ImageView
+                                    android:background="@drawable/baby18"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"/>
+                                <TextView
+                                    android:id="@+id/passengerchildCountView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:padding="3dp"
+                                    android:textSize="10dp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--End of date -->
+
+                </LinearLayout>
+                <!--End passengere-->
+
+            </LinearLayout>
+            <Button
+                android:text="Searching For Flight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/searching"
+                android:layout_below="@+id/second_container"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textColor="#ececec"
+                android:background="@drawable/button"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_scroll">
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
